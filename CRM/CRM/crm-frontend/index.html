@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normilize.css">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+  <link rel="stylesheet" href="./libs/choices.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css" >
+  <script defer type="module" src="./script/main.js"></script>
+  <title>SKB.-CRM</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container flex">
+      <div class="header__wrap container flex">
+        <img class="header__logo" src="img/company-logo.svg" alt="Логотип компании">
+        <input id="search-input" class="header__search" type="text" placeholder="Введите запрос">
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero__container flex">
+        <h1 class="title hero__title">
+          Клиенты
+        </h1>
+        <div class="wrap" id="wrap">
+          <table class="table hero__table">
+            <thead class="table__head head">
+              <tr class="table__head-row">
+                <th id="id-sort" class="table__header sort-btn table__header-id" data-type="id">
+                  ID
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M2 6L2.705 6.705L5.5 3.915L5.5 10L6.5 10L6.5 3.915L9.29 6.71L10 6L6 2L2 6Z"
+                        fill="#9873FF" />
+                    </g>
+                  </svg>
+                </th>
+                <th id="fullname-sort" class="table__header sort-btn table__header-full-name" data-type="surname">
+                  Фамилия Имя Отчество
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M2 6L2.705 6.705L5.5 3.915L5.5 10L6.5 10L6.5 3.915L9.29 6.71L10 6L6 2L2 6Z"
+                        fill="#9873FF" />
+                    </g>
+                  </svg>
+                  <span class="sort-dec-down sort-dec">А-Я</span>
+                  <span class="sort-dec-up sort-dec visually-hidden">Я-А</span>
+                </th>
+                <th id="created-at-sort" class="table__header sort-btn table__header-create" data-type="createdAt">
+                  Дата и&nbsp;время создания
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M2 6L2.705 6.705L5.5 3.915L5.5 10L6.5 10L6.5 3.915L9.29 6.71L10 6L6 2L2 6Z"
+                        fill="#9873FF" />
+                    </g>
+                  </svg>
+                </th>
+                <th id="edited-at-sort" class="table__header sort-btn table__header-edit" data-type="updatedAt">
+                  Последние изменения
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M2 6L2.705 6.705L5.5 3.915L5.5 10L6.5 10L6.5 3.915L9.29 6.71L10 6L6 2L2 6Z"
+                        fill="#9873FF" />
+                    </g>
+                  </svg>
+                </th>
+                <th class="table__header-not-hover table__header-contacts">
+                  Контакты
+                </th>
+                <th class="table__header-not-hover table__header-action">
+                  Действия
+                </th>
+              </tr>
+            </thead>
+            <tbody id="table__body" class="table__body">
+            </tbody>
+          </table>
+        </div>
+        <button id="add-client" class="btn-reset add-user btn-secondary">
+          <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z"
+              fill="#9873FF" />
+          </svg>
+          Добавить клиента
+        </button>
+      </div>
+    </section>
+  </main>
+  <div id="modal-confirm-wrap"></div>
+  <div id="main-modal-wrap"></div>
+  <script src="./libs/choices.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="./libs/inputmask.min.js"></script>
+</body>
+
+</html>
